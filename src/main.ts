@@ -16,6 +16,6 @@ async function bootstrap() {
     },
   );
   await app.listen();
-  Logger.log(`Auth ms running on ${envs.natsServers}`, 'main');
+  Logger.log(`Auth microservice running on port ${envs.port}`, 'main');
 }
 bootstrap();
