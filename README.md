@@ -6,3 +6,12 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+
+  # Auth Microservce
+
+  ## Dev
+
+  1. Clone the repository
+  2. Create ```.env``` based on .env.template file
+  3. Run ```pnpm install```
+  4. Run ```pnpm run start:dev```
