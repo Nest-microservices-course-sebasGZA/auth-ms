@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
+import { JwtModule } from '@nestjs/jwt';
 
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
-import { envs } from 'src/config/envs';
-import { NATS_SERVICE } from 'src/config/services';
+import { envs } from '../config/envs';
+import { NATS_SERVICE } from '../config/services';
 
 @Module({
   controllers: [AuthController],
@@ -19,6 +20,11 @@ import { NATS_SERVICE } from 'src/config/services';
         },
       },
     ]),
+    JwtModule.register({
+      global: true,
+      secret: envs.jwtSecret,
+      signOptions: { expiresIn: '60s' },
+    }),
   ],
 })
 export class AuthModule {}
