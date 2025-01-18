@@ -16,5 +16,3 @@ steps:
         "push",
         "us-west2-docker.pkg.dev/custom-woodland-448200-m5/store-microservices/auth-ms",
       ]
-options:
-  logging: CLOUD_LOGGING_ONLY
