@@ -6,7 +6,7 @@ steps:
         "-t",
         "us-west2-docker.pkg.dev/custom-woodland-448200-m5/store-microservices/auth-ms",
         "-f",
-        "dockerfile.prod",
+        "Dockerfile.prod",
         "--platform=linux/amd64",
         ".",
       ]
